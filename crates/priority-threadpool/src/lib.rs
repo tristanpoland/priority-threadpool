@@ -240,12 +240,7 @@ where
             },
         );
 
-        // TODO(mdeand): Unparking when the thread is unparked will cause
-        // TODO(mdeand): the next invoation of park() on that given thread
-        // TODO(mdeand): to not block. This isn't a terrible issue currently
-        // TODO(mdeand): however this implementation could be more efficient.
-
-        //self.wake();
+        self.wake();
     }
 
     pub fn queue_delayed<M: Send + Sync + 'static>(
@@ -263,11 +258,6 @@ where
             },
         );
 
-        // TODO(mdeand): Unparking when the thread is unparked will cause
-        // TODO(mdeand): the next invoation of park() on that given thread
-        // TODO(mdeand): to not block. This isn't a terrible issue currently
-        // TODO(mdeand): however this implementation could be more efficient.
-
-        //self.wake();
+        self.wake();
     }
 }
